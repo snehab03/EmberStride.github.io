@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmberStride</title>
+    <link rel="shortcut icon" width="100%" height="100%" type="image/png" href="/img/favicon_EmberStride.png">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/dark.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/ES_logo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/home">Home</a></li>
+                <li><a class="active" href="/shop">Shop</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li id="lg-bag"><a href="/cart"><i class="fa-solid fa-shopping-cart"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="/cart"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+
+
+    <section id="page-header">
+        <h2>#stayhome</h2>
+        <p>Save more with coupons & up to 70% off! </p>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+
+            <% oldshoes.forEach(function(shoes){%>
+
+
+                <div class="pro">
+                    <form action="/product" method="post">
+                        <button type="submit" style="background: none; border: none; width: 100%;
+                        min-width: 50%; height: 37vh; border-radius: 20px;" name="item" value="<%= shoes._id%>"> <img
+                                src="img/products/<%= shoes.img%>.jpg" alt=""></button>
+                        <input type="hidden" name="img" value="<%=shoes.img%>" />
+                    </form>
+                    <div class="des">
+                        <span>
+                            <%= shoes.cName%>
+                        </span>
+                        <h5>
+                            <%= shoes.pName%>
+                        </h5>
+                        <div class="star">
+                            <% var sz=shoes.star; %>
+                                <!-- use Semi colon inside the sz=shoes.star ;  -->
+                                <% for(var i=1; i <=sz; i++) { %>
+                                    <i class="fas fa-star"></i>
+                                    <% } %>
+                        </div>
+                        <h4>Rs <%= shoes.price %>/-
+                        </h4>
+                    </div>
+                    <form action="/add" method="post">
+                        <button type="submit" style="background: transparent; border: none !important;" name="item" value="<%= shoes._id%>"> <i
+                                class="fal fa-shopping-cart cart"></i></button>
+
+                        <input type="hidden" name="img" value="<%=shoes.img%>" />
+                        <input type="hidden" name="site" value="<%=site%>" />
+
+                    </form>
+
+
+                </div>
+
+                <%})%>
+
+
+                    <% newshoes.forEach(function(shoes){%>
+                        <div class="pro">
+                            <form action="/product" method="post">
+                                <button type="submit" style="background: none; border: none; width: 100%;
+                                min-width: 50%; height: 37vh; border-radius: 20px;" name="item" value="<%= shoes._id%>"> <img
+                                        src="img/products/<%= shoes.img%>.jpg" alt=""></button>
+                                <input type="hidden" name="img" value="<%=shoes.img%>" />
+                            </form>
+                            <div class="des">
+                                <span>
+                                    <%= shoes.cName%>
+                                </span>
+                                <h5>
+                                    <%= shoes.pName%>
+                                </h5>
+                                <div class="star">
+                                    <% var sz=shoes.star; %>
+                                        <!-- use Semi colon inside the sz=shoes.star ;  -->
+                                        <% for(var i=1; i < sz; i++) { %>
+                                            <i class="fas fa-star"></i>
+                                            <% } %>
+                                </div>
+                                <h4>Rs <%= shoes.price %>/-
+                                </h4>
+                            </div>
+                            <form action="/add" method="post">
+                                <button type="submit" style="background: transparent; border: none !important;" name="item" value="<%= shoes._id%>"> <i
+                                        class="fal fa-shopping-cart cart"></i></button>
+
+                                <input type="hidden" name="img" value="<%=shoes.img%>" />
+                                <input type="hidden" name="site" value="<%=site%>" />
+
+                            </form>
+                        </div>
+                        <%})%>
+        </div>
+    </section>
+
+    <section id="pagination" class="section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fal fa-long-arrow-alt-right"></i></a>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up for Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+
+        <div class="form">
+            <input type="text" placeholder="abc@gmail.com">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <%- include('partials/footer') %>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmberStride</title>
+    <link rel="shortcut icon" width="100%" height="100%" type="image/png" href="/img/favicon_EmberStride.png">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/dark.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/ES_logo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a class="active" href="/blog">Blog</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li id="lg-bag"><a href="/cart"><i class="fa-solid fa-shopping-cart"></i></a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="/cart"><i class="far fa-shopping-bag"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="blog-header">
+        <h2>#readmore</h2>
+        <p>Read all case studies about our products!</p>
+    </section>
+
+    <section id="blog">
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/blog/b2.jpg" alt="">
+            </div>
+
+            <div class="blog-details">
+                <h4>The Art of Sneaker Collecting: A Passionate Subculture</h4>
+                <p align="justify">Sneaker collecting has evolved into a dedicated subculture, captivating enthusiasts worldwide. These passionate collectors go beyond wearing sneakers for style; they seek rare editions, limited releases, and collaborations, turning their love for sneakers into an art form. Let's dive into the fascinating world of sneaker collecting.
+                </p>
+                <a href="#">CONTINUE READING</a>
+            </div>
+            <h1 class="left">13/01</h1>
+        </div>
+
+        <div class="blog-box">
+            <div class="blog-details">
+                <h4>Footwear for the Great Outdoors: Choosing the Right Adventure Shoes</h4>
+                <p align="justify" style="padding-right: 40px;">For nature enthusiasts and adventurers, the right pair of shoes is essential to conquer challenging terrains and fully immerse themselves in the great outdoors. Whether hiking, trekking, or camping, having the appropriate adventure shoes can significantly enhance the experience. Let's explore how to choose the perfect pair for your outdoor escapades.
+                </p>
+                <a href="#">CONTINUE READING</a>
+            </div>
+            <div class="blog-img">
+                <img src="img/blog/b1.jpg" alt="">
+            </div>
+            <h1 class="right">17/07</h1>
+        </div>
+
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/blog/b4.jpg" alt="">
+            </div>
+
+            <div class="blog-details">
+                <h4>The Evolution of Sneakers: From Sports to Street Fashion</h4>
+                <p align="justify">Sneakers, once designed solely for sports performance, have now become an iconic fashion statement. Over the years, these humble athletic shoes have evolved into a symbol of style and individuality. Let's take a journey through the history of sneakers, exploring how they transformed from functional sports gear to must-have items in every fashion-forward wardrobe.
+                </p>
+                <a href="#">CONTINUE READING</a>
+            </div>
+            <h1 class="left">04/10</h1>
+        </div>
+
+        <div class="blog-box">
+            <div class="blog-details">
+                <h4>The Power of Comfort: Choosing the Right Everyday Shoes</h4>
+                <p style="padding-right: 40px;" align="justify">In our fast-paced lives, comfortable footwear is not just a luxury but a necessity. The right pair of everyday shoes can make all the difference, ensuring you stay energized and ready to tackle the day's challenges. Let's explore why comfort matters when it comes to choosing your go-to footwear.
+                </p>
+                <a href="#">CONTINUE READING</a>
+            </div>
+            <div class="blog-img">
+                <img src="img/blog/b3.jpg" alt="">
+            </div>
+            <h1 class="right">12/12</h1>
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up for Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+
+        <div class="form">
+            <input type="text" placeholder="abc@gmail.com">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <%- include('partials/footer') %>
